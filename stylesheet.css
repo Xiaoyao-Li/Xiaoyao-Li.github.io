@@ -105,9 +105,9 @@ abs {
 strong {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 15px;
-  font-style: oblique;
+  /* font-style: oblique; */
   font-weight: 600;
-  text-decoration: underline;
+  /* text-decoration: underline; */
 }
 
 coa {
