@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description"
+        content="Learning novel manipulation skills with agent-agnostic visual and action representations.">
+    <meta name="keywords" content="Robotic manipulation, embodied intelligence, skill learning, robotic tasks">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ag2Manip</title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script> -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'G-PYVRSFMDRL');
+    </script>
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+    <link rel="icon" href="./static/images/favicon.svg">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <script src="./static/js/index.js"></script>
+</head>
+
+<body>
+
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div class="navbar-menu">
+            <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">
+                        Related Research
+                    </a>
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item" href="https://multigrasp.github.io/" target="_blank">
+                            [RA-L 24] Multi-object Grasping
+                        </a>
+                        <a class="navbar-item" href="https://helloqxwang.github.io/SparseDFF/" target="_blank">
+                            [ICLR 24] One-shot Dexterous Manipulation
+                        </a>
+                        <a class="navbar-item" href="https://sites.google.com/view/gendexgrasp/home" target="_blank">
+                            [ICRA 23] GenDexGrasp: Generalizable Dexterous Grasping
+                        </a>
+                        <a class="navbar-item" href="https://sites.google.com/view/gendexgrasp/home" target="_blank">
+                            [ICRA 23] DexGraspNet: Dexterous Grasp Dataset
+                        </a>
+                        <a class="navbar-item" href="https://sites.google.com/view/ral2021-grasp/home" target="_blank">
+                            [RA-L 21] Differentiable Force Closure
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+
+    <section class="hero title-area">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered">
+                    <div class="column has-text-centered">
+                        <h1 class="title is-1 publication-title">Ag2Manip</h1>
+                        <h1 class="title is-2 publication-title">Learning Novel Manipulation Skills
+                            with<br />Agent-Agnostic Visual and Action Representations</h1>
+                        <div class="is-size-5 publication-authors">
+                            <span class="author-block"><a href="https://xiaoyao-li.github.io" target="_blank">Puhao
+                                    Li</a><sup>1,2,*</sup>,</span>
+                            <span class="author-block"><a href="https://tengyu.ai" target="_blank">Tengyu
+                                    Liu</a><sup>1,*</sup>,</span>
+                            <span class="author-block"><a href="https://yuyangli.com" target="_blank">Yuyang
+                                    Li</a><sup>1,2,3</sup>,</span>
+                            <span class="author-block"><a href="https://sites.google.com/view/muzhihan/home"
+                                    target="_blank">Muzhi Han</a><sup>1,4</sup>,</span>
+                            <span class="author-block"><a href="https://geng-haoran.github.io/" target="_blank">Haoran
+                                    Geng</a><sup>1,5</sup>,</span>
+                            <span class="author-block"><a
+                                    href="https://scholar.google.com/citations?user=uPk5l1EAAAAJ&hl=en"
+                                    target="_blank">Shu Wang</a><sup>1,4</sup>,</span>
+                            <br />
+                            <span class="author-block"><a href="https://yzhu.io" target="_blank">Yixin
+                                    Zhu</a><sup>3</sup>,</span>
+                            <span class="author-block"><a href="http://www.stat.ucla.edu/~sczhu/"
+                                    target="_blank">Song-Chun Zhu</a><sup>1,2,3</sup>,</span>
+                            <span class="author-block"><a href="https://siyuanhuang.com/" target="_blank">Siyuan
+                                    Huang</a><sup>1,&#8224;</sup>,</span>
+                        </div>
+
+                        <div class="is-size-5 publication-authors">
+                            <span class="author-block"><sup>*</sup>Equal contributors <sup>&#8224;</sup>Corresponding
+                                author</span>
+                            <br />
+                            <span class="author-block"><sup>1</sup>National Key Laboratory of General Artificial
+                                Intelligence, BIGAI.</span>
+                            <br />
+                            <span class="author-block"><sup>2</sup>Department of Automation, THU.</span>
+                            <!-- <br /> -->
+                            <span class="author-block"><sup>3</sup>Institute for AI, PKU.</span>
+                            <!-- <br /> -->
+                            <span class="author-block"><sup>4</sup>UCLA.</span>
+                            <span class="author-block"><sup>5</sup>School of EECS, PKU.</span>
+                            
+                        </div>
+
+                        <div class="column has-text-centered">
+                            <div class="publication-links">
+                                <!-- PDF Link. -->
+                                <span class="link-block">
+                                    <a href="#" class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="fas fa-file-pdf"></i>
+                                        </span>
+                                        <span>Paper</span>
+                                    </a>
+                                </span>
+                                <span class="link-block">
+                                    <a href="#" class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="ai ai-arxiv"></i>
+                                        </span>
+                                        <span>arXiv</span>
+                                    </a>
+                                </span>
+                                <span class="link-block">
+                                    <a href="#" class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="fab fa-github"></i>
+                                        </span>
+                                        <span>Code</span>
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="hero teaser" style="margin-top: 0px;">
+        <div class="container is-max-desktop">
+            <div class="hero-body">
+                <!-- <img src="assets/teaser.jpg" alt="Teaser" width="100%"> -->
+                <video id="teaser" autoplay muted loop playsinline height="100%">
+                    <source src="./assets/demo_4k_compressed.mp4"
+                            type="video/mp4">
+                  </video>
+                <h2 class="subtitle has-text-centered">
+                    Ag2Manip enables various manipulation tasks <strong>without</strong> necessitating domain-specific demonstrations.
+                </h2>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-10">
+                    <h2 class="title is-3">Abstract</h2>
+                    <div class="content has-text-justified">
+                        <p>
+                            Enhancing the ability of robotic systems to autonomously acquire novel manipulation skills
+                            is vital for applications ranging from assembly lines to service robots. Existing methods
+                            (<i>e.g.</i>, VIP, R3M) rely on learning a generalized representation for manipulation tasks
+                            but overlook (i) the domain gap between distinct embodiments and (ii) the sparseness of
+                            successful task trajectories within the embodiment-specific action space, leading to
+                            misaligned and ambiguous task representations with inferior learning efficiency. Our work
+                            addresses the above challenges by introducing <strong>Ag2Manip</strong>
+                            (<strong>Ag</strong>ent-<strong>Ag</strong>nostic representations for
+                            <strong>Manip</strong>ulation) for learning novel manipulation skills.
+                            Our approach encompasses two principal innovations: (i) a novel agent-agnostic visual
+                            representation trained on human manipulation videos with embodiments masked to ensure
+                            generalizability, and (ii) an agent-agnostic action representation that abstracts the
+                            robot's kinematic chain into an agent proxy with a universally applicable action space to
+                            focus on the core interaction between the end-effector and the object.
+                            Through our experiments, Ag2Manip demonstrates remarkable improvements across a diverse
+                            array of manipulation tasks <strong>without necessitating domain-specific demonstrations,
+                            substantiating a significant 325% improvement</strong> in average success rate across 24
+                            tasks from <TT>FrankaKitchen</TT>, <TT>ManiSkill</TT>, and <TT>PartManip</TT>. Further ablation studies underscore the
+                            critical role of both representations in achieving such improvements.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- <hr> -->
+
+    <section class="section">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-10">
+                    <h2 class="title is-3">Pipeline of Ag2Manip</h2>
+                    <img src="assets/pipeline.jpg" alt="Pipeline" width="100%">
+                    <div class="content has-text-justified">
+                        <p>
+                            <!-- <strong>Pipeline of Ag2Manip: </strong> -->
+                            Our method consists of three parts: (left) learning an agent-agnostic visual representation;
+                            (middle) learning abstracted skills with an agent-agnostic action representation; and
+                            (right) retargeting the abstracted skills to a robot.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+  
+    <!-- <section class="section" id="BibTeX">
+        <div class="container is-max-desktop content">
+        <h2 class="title">BibTeX</h2>
+        <pre><code>@article{li2024grasp,
+    author={Li, Yuyang and Liu, Bo and Geng, Yiran and Li, Puhao and Yang, Yaodong and Zhu, Yixin and Liu, Tengyu and
+    Huang, Siyuan},
+    title={Grasp Multiple Objects with One Hand},
+    journal={IEEE Robotics and Automation Letters},
+    volume={9},
+    number={5},
+    pages={4027-4034},
+    year={2023},
+    doi={10.1109/LRA.2024.3374190}
+}</code></pre>
+    </div>
+    </section> -->
+
+    <footer class="footer">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-8">
+                    <div class="content">
+                        <p>
+                            This website is licensed under a <a rel="license"
+                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                                Commons Attribution-ShareAlike 4.0 International License</a>.
+                        </p>
+                        <p>
+                            Template borrowed from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a> and <a href="https://multigrasp.github.io">MultiGrasp</a>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
