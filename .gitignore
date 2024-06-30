@@ -1,3 +1,4 @@
 images/Icon/*
 images/Personal/*
 !images/Personal/Puhao.jpg
+.vscode
