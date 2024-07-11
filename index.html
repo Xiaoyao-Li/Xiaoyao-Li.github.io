@@ -34,21 +34,21 @@
         <td style="padding:0px">
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr style="padding:0px">
-              <td style="padding:2.8%;width:60%;vertical-align:middle">
+              <td style="padding:2.3%;width:60%;vertical-align:middle">
                 <p style="text-align:center">
                   <name>Puhao Li &nbsp | &nbsp 李浦豪</name>
                 </p>
-                <p>
-                  I am currently a Ph.D. student in <a href="https://www.au.tsinghua.edu.cn/" target="_blank">Dept. of Automation, Tsinghua University</a> advised by <a href="https://www.zhusongchun.net/" target="_blank">Song-Chun Zhu</a>.
+                <p style="font-size:15px; line-height:1.;">
+                  I am currently a Ph.D. student in <a href="https://www.au.tsinghua.edu.cn/" target="_blank">Dept. of Automation, Tsinghua University</a> advised by Prof. <a href="https://www.zhusongchun.net/" target="_blank">Song-Chun Zhu</a>.
                   I am also a research intern in General Vision Lab at <a href="https://bigai.ai/" target="_blank">Beijing Institute for General Artificial Intelligence (BIGAI)</a>, and I am grateful to be advised by Dr. <a href="http://tengyu.ai/" target="_blank">Tengyu Liu</a> and Dr. <a href="https://siyuanhuang.com/" target="_blank">Siyuan Huang</a>. 
                   Previously, I obtained my B.Eng. degree from Tsinghua University in 2023.
-              </p>
-                <p>
+                </p>
+                <p style="font-size:15px; line-height:1.;">
                     My research interests lie in the intersection of robotics manipulation and 3D computer vision.
                     My long-term goal is to develop embodied intelligent systems capable of interpreting human intent and naturally interacting with people in various environments, learning reusable and endless low-level skill sets and high-level common sense.
                     Currently, I am working on 3D scene understanding and robotic manipulation learning, pushing the boundaries of how robots operate within complex settings.
                 </p>
-                <p style="text-align:center">
+                <p style="text-align:center; font-size:16px; font-weight:initial;">
                   <a href="mailto:puhaoli01@gmail.com">Email</a> &nbsp/&nbsp
                   <a href="https://xiaoyao-li.github.io/files/cv_recent.pdf">CV</a> &nbsp/&nbsp
                   <a href="https://scholar.google.at/citations?user=HTsO18AAAAAJ&hl=en&oi=ao" target="_blank">Google Scholar</a> &nbsp/&nbsp
@@ -107,7 +107,52 @@
             abstract, abstract, abstract, abstract, abstract, abstract, abstract, abstract, abstract, abstract, abstract, abstract, abstract, abstract, abstract, abstract, abstract, abstract, abstract, abstract, abstract, abstract, abstract, abstract
           </abs>
         </td>
-      </tr> -->
+      </tr>
+
+      <!-- phyrecon -->
+      <tr onmouseout="phyrecon_stop()" onmouseover="phyrecon_start()">
+        <td style="width:30%;vertical-align:middle;padding-left:0px;padding-top:35px">
+          <div class="one">
+            <div class="two" id='phyrecon_image'>
+              <img src='images/research/PhyRecon.gif' width="220"></div>
+            <img src='images/research/PhyRecon.gif' width="220">
+          </div>
+          <script type="text/javascript">
+            function phyrecon_start() {
+              document.getElementById('phyrecon_image').style.opacity = "1";
+            }
+
+            function phyrecon_stop() {
+              document.getElementById('phyrecon_image').style.opacity = "0";
+            }
+            phyrecon_stop()
+          </script>
+        </td>
+        <td style="width:75%;vertical-align:middle;padding-left:5px;padding-top:0px">
+          <papertitle>PhyRecon: Physically Plausible Neural Scene Reconstruction</papertitle>
+          <br>
+          <a href="#" target="https://dali-jack.github.io/Junfeng-Ni/">Junfeng Ni*</a>,
+          <a href="#" target="https://yixchen.github.io/">Yixin Chen*</a>,
+          <a href="#" target="_blank">Bohan Jing</a>,
+          <a href="#" target="https://pku.ai/author/nan-jiang/">Nan Jiang</a>,
+          <a href="#" target="https://binwangbfa.github.io/">Bing Wang</a>,
+          <a href="#" target="https://daibopku.github.io/daibo/">Bo Dai</a>,
+          Puhao Li,
+          <a href="#" target="https://yzhu.io/">Yixin Zhu</a>,
+          <a href="#" target="https://zhusongchun.net/">Song-Chun Zhu</a>,
+          <a href="#" target="https://siyuanhuang.com/">Siyuan Huang</a>,
+          <br>
+          <em>arXiv</em> 2024
+          <br>
+          <a href="#" target="https://arxiv.org/abs/2404.16666">[Paper]</a>
+          <a href="#" target="https://github.com/PhyRecon/PhyRecon">[Code]</a>
+          <a href="#" target="https://phyrecon.github.io/">[Project Page]</a>
+          <br>
+          <abs>
+            We introduce PhyRecon, which enables physically plausible reconstruction with joint optimization in both differentiable rendering and physics simulation.
+          </abs>
+        </td>
+      </tr>
 
       <!-- ag2manip -->
       <tr onmouseout="ag2manip_stop()" onmouseover="ag2manip_start()">
@@ -141,7 +186,7 @@
           <a href="https://www.zhusongchun.net/" target="_blank">Song-Chun Zhu</a>,
           <a href="https://siyuanhuang.com" target="_blank">Siyuan Huang</a>
           <br>
-          <em>IROS</em> 2024
+          <em>IROS</em> 2024 <font color='red'>(Oral Pitch)</font>
           <br>
           <a href="https://arxiv.org/abs/2404.17521" target="_blank">[Paper]</a>
           <!-- &nbsp -->
@@ -153,6 +198,51 @@
           <br>
           <abs>
             We introduce Ag2Manip, which enables various robotic manipulation tasks without any domain-specific demonstrations. Ag2Manip also supports robust imitation learning of manipulation skills in the real world.
+          </abs>
+        </td>
+      </tr>
+      
+      <!-- multigrasp -->
+      <tr onmouseout="multigrasp_stop()" onmouseover="multigrasp_start()">
+        <td style="width:30%;vertical-align:middle;padding-top:40px;padding-bottom:0px;">
+          <div class="one">
+            <div class="two" id='multigrasp_image'>
+              <img src='images/research/MultiGrasp.gif' width="220"></div>
+            <img src='images/research/MultiGrasp.gif' width="220">
+          </div>
+          <script type="text/javascript">
+            function multigrasp_start() {
+              document.getElementById('multigrasp_image').style.opacity = "1";
+            }
+
+            function multigrasp_stop() {
+              document.getElementById('multigrasp_image').style.opacity = "0";
+            }
+            multigrasp_stop()
+          </script>
+        </td>
+        <td style="width:75%;vertical-align:middle;padding-left:5px;padding-top:0px;">
+          <papertitle>Grasp Multiple Objects with One Hand</papertitle>
+          <br>
+          <a href="https://yuyangli.com" target="_blank">Yuyang Li</a>,
+          <a href="https://benjamin-eecs.github.io/" target="_blank">Bo Liu</a>,
+          <a href="https://gengyiran.github.io/" target="_blank">Yiran Geng</a>,
+          Puhao Li,
+          <a href="https://www.yangyaodong.com" target="_blank">Yaodong Yang</a>,
+          <a href="https://yzhu.io" target="_blank">Yixin Zhu</a>,
+          <a href="http://tengyu.ai/" target="_blank">Tengyu Liu</a>,
+          <a href="https://siyuanhuang.com" target="_blank">Siyuan Huang</a>
+
+          <br>
+          <em>RA-L</em>, presented at <em>IROS</em> 2024 <font color='red'>(Oral Presentation)</font>
+          <br>
+          <a href="https://arxiv.org/abs/2310.15599" target="_blank">[Paper]</a>
+          <a href="https://multigrasp.github.io/" target="_blank">[Code]</a>
+          <a href="https://github.com/MultiGrasp/MultiGrasp/tree/graspem" target="_blank">[Data]</a>
+          <a href="https://multigrasp.github.io/" target="_blank">[Project Page]</a>
+          <br>
+          <abs>
+            We introduce MultiGrasp, a two-stage framework for simultaneous multi-object grasping with multi-finger dexterous hands. In addition, we contribute Grasp'Em, a large-scale synthetic multi-object grasping dataset.
           </abs>
         </td>
       </tr>
@@ -198,51 +288,6 @@
           <br>
           <abs>
             We introduce a novel two-stage framework that employs scene affordance as an intermediate representation, effectively linking 3D scene grounding and conditional motion generation.
-          </abs>
-        </td>
-      </tr>
-
-      <!-- multigrasp -->
-      <tr onmouseout="multigrasp_stop()" onmouseover="multigrasp_start()">
-        <td style="width:30%;vertical-align:middle;padding-top:40px;padding-bottom:0px;">
-          <div class="one">
-            <div class="two" id='multigrasp_image'>
-              <img src='images/research/MultiGrasp.gif' width="220"></div>
-            <img src='images/research/MultiGrasp.gif' width="220">
-          </div>
-          <script type="text/javascript">
-            function multigrasp_start() {
-              document.getElementById('multigrasp_image').style.opacity = "1";
-            }
-
-            function multigrasp_stop() {
-              document.getElementById('multigrasp_image').style.opacity = "0";
-            }
-            multigrasp_stop()
-          </script>
-        </td>
-        <td style="width:75%;vertical-align:middle;padding-left:5px;padding-top:0px;">
-          <papertitle>Grasp Multiple Objects with One Hand</papertitle>
-          <br>
-          <a href="https://yuyangli.com" target="_blank">Yuyang Li</a>,
-          <a href="https://benjamin-eecs.github.io/" target="_blank">Bo Liu</a>,
-          <a href="https://gengyiran.github.io/" target="_blank">Yiran Geng</a>,
-          Puhao Li,
-          <a href="https://www.yangyaodong.com" target="_blank">Yaodong Yang</a>,
-          <a href="https://yzhu.io" target="_blank">Yixin Zhu</a>,
-          <a href="http://tengyu.ai/" target="_blank">Tengyu Liu</a>,
-          <a href="https://siyuanhuang.com" target="_blank">Siyuan Huang</a>
-
-          <br>
-          <em>RA-L</em>, presented at <em>IROS</em> 2024 <font color='red'>(Oral)</font>
-          <br>
-          <a href="https://arxiv.org/abs/2310.15599" target="_blank">[Paper]</a>
-          <a href="https://multigrasp.github.io/" target="_blank">[Code]</a>
-          <a href="https://github.com/MultiGrasp/MultiGrasp/tree/graspem" target="_blank">[Data]</a>
-          <a href="https://multigrasp.github.io/" target="_blank">[Project Page]</a>
-          <br>
-          <abs>
-            We introduce MultiGrasp, a two-stage framework for simultaneous multi-object grasping with multi-finger dexterous hands. In addition, we contribute Grasp'Em, a large-scale synthetic multi-object grasping dataset.
           </abs>
         </td>
       </tr>
@@ -419,7 +464,7 @@
           <a href="https://hughw19.github.io/" target="_blank">He Wang</a>
           
           <br>
-          <em>ICRA</em> 2023 <font color='red'>(Oral, Outstanding Manipulation Paper Finalist)</font>
+          <em>ICRA</em> 2023 <font color='red'>(Oral Presentation, Outstanding Manipulation Paper Finalist)</font>
           <br>
           <a href="https://arxiv.org/abs/2210.02697" target="_blank">[Paper]</a>
           <a href="https://github.com/PKU-EPIC/DexGraspNet" target="_blank">[Code]</a>
@@ -427,7 +472,7 @@
           <a href="https://pku-epic.github.io/DexGraspNet/" target="_blank">[Project Page]</a>
           <br>
           <abs>
-            We present a large-scale dexterous grasping dataset DexGraspNet, which based on simulation. 
+            We introduce a large-scale dexterous grasping dataset DexGraspNet, which based on simulation. 
             DexGraspNet features more physical stability and higher diversity than previous grasping datasets.
           </abs>
         </td>
