@@ -131,7 +131,7 @@
         <td style="width:75%;vertical-align:middle;padding-left:5px;padding-top:0px;padding-bottom:10px;">
           <papertitle>Taccel: Scaling Up Vision-based Tactile Robotics via High-performance GPU Simulation</papertitle>
           <br>
-          <a href="https://yuyang.li/" target="_blank">Yuyang Li</a>,
+          <a href="https://yuyang.li/" target="_blank">Yuyang Li*</a>,
           <a target="_blank">Wenxin Du*</a>,
           <a target="_blank">Chang Yu*</a>,
           Puhao Li,
@@ -141,11 +141,12 @@
           <a href="https://yzhu.io/" target="_blank">Yixin Zhu</a>,
           <a href="https://siyuanhuang.com/" target="_blank">Siyuan Huang</a>
           <br>
-          <em>arXiv</em> 2025
+          <em>NeurIPS</em> 2025 <font color='red'>(Spotlight)</font>
           <br>
           <a href="https://arxiv.org/abs/2504.12908" target="_blank">[Paper]</a>
           <a href="https://github.com/Taccel-Simulator/Taccel" target="_blank">[Code]</a>
           <a href="https://taccel-simulator.github.io/index.html" target="_blank">[Docs]</a>
+          <a href="https://developer.nvidia.com/blog/train-a-quadruped-locomotion-policy-and-simulate-cloth-manipulation-with-nvidia-isaac-lab-and-newton/#:~:text=Peking%20University%20(PKU,and%20deformable%20manipulation." target="_blank">[NVIDIA Tech Blog]</a>
           <br>
           <abs>
             We develop Taccel, a high-performance GPU-based simulator, combining ABD and IPC, for simulating robots with vision-based tactile sensors.
@@ -153,7 +154,7 @@
         </td>
       </tr>
 
-      <!-- example -->
+      <!-- controlvla -->
       <tr onmouseout="controlvla_stop()" onmouseover="controlvla_start()">
         <td style="width:30%;vertical-align:middle;padding-left:0px;padding-top:35px">
           <div class="one">
@@ -181,7 +182,7 @@
           <a href="https://scholar.google.com/citations?user=n_mYangAAAAJ&hl=zh-CN" target="_blank">Wanlin Li</a>,
           <a target="_blank">Yuzhe Huang</a>,
           <a href="https://scholar.google.com/citations?user=BS7FuB0AAAAJ&hl=en" target="_blank">Zhiyuan Zhang</a>,
-          <a target="_blank">Yinghan Chen</a>,
+          <a href="https://pku.ai/author/yinghan-chen/" target="_blank">Yinghan Chen</a>,
           <a href="https://scholar.google.com/citations?user=mt5mvZ8AAAAJ&hl=en" target="_blank">Jianan Wang</a>,
           <a href="https://zhusongchun.net/" target="_blank">Song-Chun Zhu</a>,
           <a href="https://tengyu.ai/" target="_blank">Tengyu Liu</a>,
@@ -195,6 +196,89 @@
           <br>
           <abs>
             We introduce ControlVLA, a few-shot object-centric adaptation method for pre-trained VLA. By reducing demonstrations requirements, ControlVLA lowers barriers to deploying robots in diverse scenarios.
+          </abs>
+        </td>
+      </tr>
+
+      <!-- gwm -->
+      <tr onmouseout="gwm_stop()" onmouseover="gwm_start()">
+        <td style="width:30%;vertical-align:middle;padding-left:0px;padding-top:40px">
+          <div class="one">
+            <div class="two" id='gwm_image'>
+              <img src='images/research/GWM.png' width="220"></div>
+            <img src='images/research/GWM.png' width="220">
+          </div>
+          <script type="text/javascript">
+            function gwm_start() {
+              document.getElementById('gwm_image').style.opacity = "1";
+            }
+
+            function gwm_stop() {
+              document.getElementById('gwm_image').style.opacity = "0";
+            }
+            gwm_stop()
+          </script>
+        </td>
+        <td style="width:75%;vertical-align:middle;padding-left:5px;padding-top:0px;padding-bottom:20px;">
+          <papertitle>GWM: Towards Scalable Gaussian World Models for Robotic Manipulation</papertitle>
+          <br>
+          <a href="https://guanxinglu.github.io/" target="_blank">Guanxing Lu*</a>,
+          <a href="https://buzz-beater.github.io/" target="_blank">Baoxiong Jia*</a>,
+          Puhao Li*,
+          <a href="https://yixchen.github.io/" target="_blank">Yixin Chen</a>,
+          <a href="https://ziweiwangthu.github.io/" target="_blank">Ziwei Wang</a>,
+          <a href="https://andytang15.github.io/" target="_blank">Yansong Tang</a>,
+          <a href="https://siyuanhuang.com/" target="_blank">Siyuan Huang</a>,
+          <br>
+          <em>ICCV</em> 2025
+          <br>
+          <a href="https://arxiv.org/abs/2508.17600" target="_blank">[Paper]</a>
+          <a href="https://github.com/Gaussian-World-Model/gaussianwm" target="_blank">[Code]</a>
+          <a href="https://gaussian-world-model.github.io/" target="_blank">[Project Page]</a>
+          <br>
+          <abs>
+            We present Gaussian World Model (GWM), a world model that predicts future dynamics and enables robotic manipulation using 3D Gaussian Splatting.
+          </abs>
+        </td>
+      </tr>
+
+      <!-- ag2x2 -->
+      <tr onmouseout="ag2x2_stop()" onmouseover="ag2x2_start()">
+        <td style="width:30%;vertical-align:middle;padding-left:0px;padding-top:10px">
+          <div class="one">
+            <div class="two" id='ag2x2_image'>
+              <img src='images/research/Ag2x2.png' width="220"></div>
+            <img src='images/research/Ag2x2.png' width="220">
+          </div>
+          <script type="text/javascript">
+            function ag2x2_start() {
+              document.getElementById('ag2x2_image').style.opacity = "1";
+            }
+
+            function ag2x2_stop() {
+              document.getElementById('ag2x2_image').style.opacity = "0";
+            }
+            ag2x2_stop()
+          </script>
+        </td>
+        <td style="width:75%;vertical-align:middle;padding-left:5px;padding-top:0px;padding-bottom:20px;">
+          <papertitle>Ag2x2: Robust Agent-Agnostic Visual Representations for Zero-Shot Bimanual Manipulation</papertitle>
+          <br>
+          <a href="#" target="_blank">Ziyin Xiong*</a>,
+          <a href="https://pku.ai/author/yinghan-chen/" target="_blank">Yinghan Chen*</a>,
+          Puhao Li,
+          <a href="https://yzhu.io/" target="_blank">Yixin Zhu</a>,
+          <a href="https://tengyu.ai/" target="_blank">Tengyu Liu</a>,
+          <a href="https://siyuanhuang.com/" target="_blank">Siyuan Huang</a>,
+          <br>
+          <em>IROS</em> 2025
+          <br>
+          <a href="https://ziyin-xiong.github.io/ag2x2.github.io/" target="_blank">[Paper]</a>
+          <a href="https://github.com/ziyin-xiong/Ag2x2" target="_blank">[Code]</a>
+          <a href="https://ziyin-xiong.github.io/ag2x2.github.io/" target="_blank">[Project Page]</a>
+          <br>
+          <abs>
+            We propose Ag2x2, a learning framework for bimanual manipulation through coordination-aware visual representations that jointly encode object states and hand motion patterns while maintaining agent-agnosticism.
           </abs>
         </td>
       </tr>
