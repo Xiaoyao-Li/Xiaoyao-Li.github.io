@@ -109,6 +109,50 @@
         </td>
       </tr>
 
+      <!-- tacthru -->
+      <tr onmouseout="tacthru_stop()" onmouseover="tacthru_start()">
+        <td style="width:30%;vertical-align:middle;padding-left:0px;padding-top:25px">
+          <div class="one">
+            <div class="two" id='tacthru_image'>
+              <img src='images/research/TacThru.jpg' width="220"></div>
+            <img src='images/research/TacThru.jpg' width="220">
+          </div>
+          <script type="text/javascript">
+            function tacthru_start() {
+              document.getElementById('tacthru_image').style.opacity = "1";
+            }
+
+            function tacthru_stop() {
+              document.getElementById('tacthru_image').style.opacity = "0";
+            }
+            tacthru_stop()
+          </script>
+        </td>
+        <td style="width:75%;vertical-align:middle;padding-left:5px;padding-top:0px">
+          <papertitle>Simultaneous Tactile-Visual Perception for Learning Multimodal Robot Manipulation</papertitle>
+          <br>
+          <a href="https://yuyang.li/" target="_blank">Yuyang Li*</a>,
+          <a href="https://yinghanchen.com/" target="_blank">Yinghan Chen*</a>,
+          <a href="https://zihangzhao.com/" target="_blank">Zihang Zhao</a>,
+          Puhao Li,
+          <a href="https://tengyu.ai/" target="_blank">Tengyu Liu</a>,
+          <a href="https://siyuanhuang.com/" target="_blank">Siyuan Huang</a>,
+          <a href="https://yzhu.io/" target="_blank">Yixin Zhu</a>
+          <br>
+          <em>arXiv</em> 2025
+          <br>
+          <a href="https://arxiv.org/abs/2512.09851" target="_blank">[Paper]</a>
+          <a href="https://github.com/YuyangLee/TacThru" target="_blank">[Code]</a>
+          <a href="https://huggingface.co/datasets/aidenli/tacthru_umi_tasks" target="_blank">[Data]</a>
+          <a href="https://docs.google.com/document/d/1fpZRiGoxWqLoFs-zxnG4d_d3hy0eHjlLA4nsuEKvCEg/edit?usp=sharing" target="_blank">[Hardware]</a>
+          <a href="https://tacthru.yuyang.li/" target="_blank">[Project Page]</a>
+          <br>
+          <abs>
+            We introduce TacThru, an STS sensor enabling simultaneous visual perception and robust tactile signal extraction, and TacThru-UMI, an imitation learning framework that leverages these multimodal signals for robotic manipulation.
+          </abs>
+        </td>
+      </tr>
+
       <!-- taccel -->
       <tr onmouseout="taccel_stop()" onmouseover="taccel_start()">
         <td style="width:30%;vertical-align:middle;padding-left:0px;padding-top:10px;padding-bottom:10px;">
@@ -119,7 +163,7 @@
           </div>
           <script type="text/javascript">
             function taccel_start() {
-              document.getElementById('taccel_image').style.opacity = "1";
+              document.getElementById('taccel_image').style.opacity = "0";
             }
 
             function taccel_stop() {
@@ -182,7 +226,7 @@
           <a href="https://scholar.google.com/citations?user=n_mYangAAAAJ&hl=zh-CN" target="_blank">Wanlin Li</a>,
           <a target="_blank">Yuzhe Huang</a>,
           <a href="https://scholar.google.com/citations?user=BS7FuB0AAAAJ&hl=en" target="_blank">Zhiyuan Zhang</a>,
-          <a href="https://pku.ai/author/yinghan-chen/" target="_blank">Yinghan Chen</a>,
+          <a href="https://yinghanchen.com/" target="_blank">Yinghan Chen</a>,
           <a href="https://scholar.google.com/citations?user=mt5mvZ8AAAAJ&hl=en" target="_blank">Jianan Wang</a>,
           <a href="https://zhusongchun.net/" target="_blank">Song-Chun Zhu</a>,
           <a href="https://tengyu.ai/" target="_blank">Tengyu Liu</a>,
